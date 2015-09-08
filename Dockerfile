@@ -13,8 +13,6 @@ RUN apt-get update \
     && apt-get autoremove \
     && rm -rf /var/lib/apt/lists/*
 
-CMD ssh-keygen -q -t rsa -N '' -f /root/.ssh/id_rsa
-
 ADD run.sh /root/run.sh
 
 EXPOSE 8080
